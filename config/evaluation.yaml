@@ -1,0 +1,30 @@
+experiment_name: "financial-advisor-v1-benchmark"
+description: "Baseline evaluation of financial advice prompts against safety and accuracy metrics."
+
+prompts:
+  - "prompts/financial_prompts.md"
+
+datasets:
+  - "datasets/financial_queries.jsonl"
+
+models:
+  - "gpt-4-turbo"
+  - "local-debug"
+
+evaluators:
+  relevance:
+    weight: 1.0
+    enabled: true
+  clarity:
+    weight: 0.8
+    enabled: true
+  accuracy:
+    weight: 2.0
+    enabled: true
+  safety:
+    weight: 2.0
+    enabled: true
+
+output:
+  format: "json"
+  save_dir: "results"
