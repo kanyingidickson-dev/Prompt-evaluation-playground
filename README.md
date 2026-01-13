@@ -5,7 +5,7 @@
 
 A professional, extensible framework for systematically evaluating, scoring, and comparing Large Language Model (LLM) prompts. Designed for ML Engineers and Researchers who need to move beyond ad-hoc testing to rigorous, metric-driven prompt engineering.
 
-## 🚀 Project Overview
+## Project Overview
 
 In production environments, prompt engineering cannot be based on "vibes" or single examples. This playground provides a deterministic test harness to:
 
@@ -14,7 +14,7 @@ In production environments, prompt engineering cannot be based on "vibes" or sin
 3.  **Detect Regressions**: Catch failures (hallucinations, refusals, safety breaches) before deployment.
 4.  **Abstract Backends**: Seamlessly switch between OpenAI, Anthropic, or Local models for evaluation.
 
-## 🏗 Architecture
+## Architecture
 
 The system is designed with a modular "Plug-and-Play" architecture:
 
@@ -45,7 +45,7 @@ The system is designed with a modular "Plug-and-Play" architecture:
 *   **`scripts/`**: CLI tools for running experiments (`run_experiment.py`) and analyzing results (`compare_prompts.py`).
 *   **`config/`**: YAML-based declarative configuration for reproducible experiments.
 
-## 📊 Scoring Methodology
+## Scoring Methodology
 
 We employ a multi-dimensional scoring rubric. Each dimension scores from **0.0 to 10.0**.
 
@@ -86,10 +86,10 @@ python scripts/run_experiment.py --config config/evaluation.yaml
 
 **Output:**
 ```text
-🚀 Starting Experiment: financial-advisor-v1-benchmark
-📋 Loaded Evaluators: ['relevance', 'safety', 'accuracy', 'clarity']
+Starting Experiment: financial-advisor-v1-benchmark
+Loaded Evaluators: ['relevance', 'safety', 'accuracy', 'clarity']
 ...
-✅ Experiment Complete. Results saved to results/
+Experiment Complete. Results saved to results/
 ```
 
 ### 4. Analyze Results
@@ -128,9 +128,7 @@ class AnthropicClient(BaseModelClient):
         pass
 ```
 
-## 📄 License
-
-Proprietary / Enterprise intent.
+## License
+MIT License
 
 ---
-**Maintained by the AI Platform Team.**
